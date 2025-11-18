@@ -9,7 +9,7 @@ Simulando um Ataque de Brute Force de Senhas com Medusa e Kali Linux
 Procure algo como 192.168.145.36/24.
 
 • **Seu IP**: 192.168.145.36  
-• **Sua Notação CIDR**: /24
+• **Sua Notação CIDR**: /24  
 • **Sua Faixa de Rede**: 192.168.145.0/24
 
 // Determine a Faixa de Escaneamento a partir da sua Notação CIDR, neste caso **/24**.
@@ -53,6 +53,7 @@ Onde:
 
 Onde:  
 **nmpa** (mapear) **-sV** (Verificação de Serviço) **-p** (Porta)  
+
 **21** → Porta do Protocolo FTP  
 **22** → Porta do Protocolo SSH  
 **80** → Porta do Protocolo HTTP  
@@ -60,3 +61,14 @@ Onde:
 **139** → Antiga Porta do Protocolo TCP/IP, também associada ao Protocolo SMB  
 
 ... **Fique à vonta para testar outras portas** ...
+
+**Exemplo de Saída Esperada**:
+```
+PORT       STATE      SERVICE          VERSION
+21/tcp     open       ftp              vsftcp 2.3.4
+22/tcp     open       ssh              OpenSSH 4.7p1 Debain...
+Service detection performed. Please report any incorrect results
+at http://nmap.org/submit/.
+Nmap done: 1 IP adress (1 host up) scanned in 24.71seconds
+```
+
